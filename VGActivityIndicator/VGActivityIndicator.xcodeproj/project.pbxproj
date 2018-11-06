@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		809644AB2191D3E0006092DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 809644AA2191D3E0006092DC /* AppDelegate.m */; };
+		809644AE2191D3E0006092DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809644AD2191D3E0006092DC /* ViewController.m */; };
+		809644B02191D3E1006092DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809644AF2191D3E1006092DC /* Assets.xcassets */; };
+		809644B32191D3E1006092DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809644B12191D3E1006092DC /* Main.storyboard */; };
+		809644B62191D3E1006092DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 809644B52191D3E1006092DC /* main.m */; };
+		809644C12191D3E1006092DC /* VGActivityIndicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 809644C02191D3E1006092DC /* VGActivityIndicatorTests.m */; };
+		809644CC2191D3E1006092DC /* VGActivityIndicatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 809644CB2191D3E1006092DC /* VGActivityIndicatorUITests.m */; };
+		809644DC2191D433006092DC /* VGActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 809644DB2191D433006092DC /* VGActivityIndicatorView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		809644BD2191D3E1006092DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8096449E2191D3E0006092DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 809644A52191D3E0006092DC;
+			remoteInfo = VGActivityIndicator;
+		};
+		809644C82191D3E1006092DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8096449E2191D3E0006092DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 809644A52191D3E0006092DC;
+			remoteInfo = VGActivityIndicator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		809644A62191D3E0006092DC /* VGActivityIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGActivityIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		809644A92191D3E0006092DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		809644AA2191D3E0006092DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		809644AC2191D3E0006092DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		809644AD2191D3E0006092DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		809644AF2191D3E1006092DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		809644B22191D3E1006092DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		809644B42191D3E1006092DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		809644B52191D3E1006092DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		809644B72191D3E1006092DC /* VGActivityIndicator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VGActivityIndicator.entitlements; sourceTree = "<group>"; };
+		809644BC2191D3E1006092DC /* VGActivityIndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VGActivityIndicatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		809644C02191D3E1006092DC /* VGActivityIndicatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VGActivityIndicatorTests.m; sourceTree = "<group>"; };
+		809644C22191D3E1006092DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		809644C72191D3E1006092DC /* VGActivityIndicatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VGActivityIndicatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		809644CB2191D3E1006092DC /* VGActivityIndicatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VGActivityIndicatorUITests.m; sourceTree = "<group>"; };
+		809644CD2191D3E1006092DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		809644DA2191D433006092DC /* VGActivityIndicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGActivityIndicatorView.h; sourceTree = "<group>"; };
+		809644DB2191D433006092DC /* VGActivityIndicatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VGActivityIndicatorView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		809644A32191D3E0006092DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		809644B92191D3E1006092DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		809644C42191D3E1006092DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8096449D2191D3E0006092DC = {
+			isa = PBXGroup;
+			children = (
+				809644A82191D3E0006092DC /* VGActivityIndicator */,
+				809644BF2191D3E1006092DC /* VGActivityIndicatorTests */,
+				809644CA2191D3E1006092DC /* VGActivityIndicatorUITests */,
+				809644A72191D3E0006092DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		809644A72191D3E0006092DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				809644A62191D3E0006092DC /* VGActivityIndicator.app */,
+				809644BC2191D3E1006092DC /* VGActivityIndicatorTests.xctest */,
+				809644C72191D3E1006092DC /* VGActivityIndicatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		809644A82191D3E0006092DC /* VGActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				809644D92191D419006092DC /* VGActivityIndicatorLayer */,
+				809644A92191D3E0006092DC /* AppDelegate.h */,
+				809644AA2191D3E0006092DC /* AppDelegate.m */,
+				809644AC2191D3E0006092DC /* ViewController.h */,
+				809644AD2191D3E0006092DC /* ViewController.m */,
+				809644AF2191D3E1006092DC /* Assets.xcassets */,
+				809644B12191D3E1006092DC /* Main.storyboard */,
+				809644B42191D3E1006092DC /* Info.plist */,
+				809644B52191D3E1006092DC /* main.m */,
+				809644B72191D3E1006092DC /* VGActivityIndicator.entitlements */,
+			);
+			path = VGActivityIndicator;
+			sourceTree = "<group>";
+		};
+		809644BF2191D3E1006092DC /* VGActivityIndicatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				809644C02191D3E1006092DC /* VGActivityIndicatorTests.m */,
+				809644C22191D3E1006092DC /* Info.plist */,
+			);
+			path = VGActivityIndicatorTests;
+			sourceTree = "<group>";
+		};
+		809644CA2191D3E1006092DC /* VGActivityIndicatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				809644CB2191D3E1006092DC /* VGActivityIndicatorUITests.m */,
+				809644CD2191D3E1006092DC /* Info.plist */,
+			);
+			path = VGActivityIndicatorUITests;
+			sourceTree = "<group>";
+		};
+		809644D92191D419006092DC /* VGActivityIndicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+				809644DA2191D433006092DC /* VGActivityIndicatorView.h */,
+				809644DB2191D433006092DC /* VGActivityIndicatorView.m */,
+			);
+			path = VGActivityIndicatorLayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		809644A52191D3E0006092DC /* VGActivityIndicator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 809644D02191D3E1006092DC /* Build configuration list for PBXNativeTarget "VGActivityIndicator" */;
+			buildPhases = (
+				809644A22191D3E0006092DC /* Sources */,
+				809644A32191D3E0006092DC /* Frameworks */,
+				809644A42191D3E0006092DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VGActivityIndicator;
+			productName = VGActivityIndicator;
+			productReference = 809644A62191D3E0006092DC /* VGActivityIndicator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		809644BB2191D3E1006092DC /* VGActivityIndicatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 809644D32191D3E1006092DC /* Build configuration list for PBXNativeTarget "VGActivityIndicatorTests" */;
+			buildPhases = (
+				809644B82191D3E1006092DC /* Sources */,
+				809644B92191D3E1006092DC /* Frameworks */,
+				809644BA2191D3E1006092DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				809644BE2191D3E1006092DC /* PBXTargetDependency */,
+			);
+			name = VGActivityIndicatorTests;
+			productName = VGActivityIndicatorTests;
+			productReference = 809644BC2191D3E1006092DC /* VGActivityIndicatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		809644C62191D3E1006092DC /* VGActivityIndicatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 809644D62191D3E1006092DC /* Build configuration list for PBXNativeTarget "VGActivityIndicatorUITests" */;
+			buildPhases = (
+				809644C32191D3E1006092DC /* Sources */,
+				809644C42191D3E1006092DC /* Frameworks */,
+				809644C52191D3E1006092DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				809644C92191D3E1006092DC /* PBXTargetDependency */,
+			);
+			name = VGActivityIndicatorUITests;
+			productName = VGActivityIndicatorUITests;
+			productReference = 809644C72191D3E1006092DC /* VGActivityIndicatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8096449E2191D3E0006092DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = vein;
+				TargetAttributes = {
+					809644A52191D3E0006092DC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					809644BB2191D3E1006092DC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 809644A52191D3E0006092DC;
+					};
+					809644C62191D3E1006092DC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 809644A52191D3E0006092DC;
+					};
+				};
+			};
+			buildConfigurationList = 809644A12191D3E0006092DC /* Build configuration list for PBXProject "VGActivityIndicator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8096449D2191D3E0006092DC;
+			productRefGroup = 809644A72191D3E0006092DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				809644A52191D3E0006092DC /* VGActivityIndicator */,
+				809644BB2191D3E1006092DC /* VGActivityIndicatorTests */,
+				809644C62191D3E1006092DC /* VGActivityIndicatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		809644A42191D3E0006092DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809644B02191D3E1006092DC /* Assets.xcassets in Resources */,
+				809644B32191D3E1006092DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		809644BA2191D3E1006092DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		809644C52191D3E1006092DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		809644A22191D3E0006092DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809644AE2191D3E0006092DC /* ViewController.m in Sources */,
+				809644DC2191D433006092DC /* VGActivityIndicatorView.m in Sources */,
+				809644B62191D3E1006092DC /* main.m in Sources */,
+				809644AB2191D3E0006092DC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		809644B82191D3E1006092DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809644C12191D3E1006092DC /* VGActivityIndicatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		809644C32191D3E1006092DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809644CC2191D3E1006092DC /* VGActivityIndicatorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		809644BE2191D3E1006092DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 809644A52191D3E0006092DC /* VGActivityIndicator */;
+			targetProxy = 809644BD2191D3E1006092DC /* PBXContainerItemProxy */;
+		};
+		809644C92191D3E1006092DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 809644A52191D3E0006092DC /* VGActivityIndicator */;
+			targetProxy = 809644C82191D3E1006092DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		809644B12191D3E1006092DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				809644B22191D3E1006092DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		809644CE2191D3E1006092DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		809644CF2191D3E1006092DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		809644D12191D3E1006092DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VGActivityIndicator/VGActivityIndicator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TVRG578TKB;
+				INFOPLIST_FILE = VGActivityIndicator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vein.VGActivityIndicator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		809644D22191D3E1006092DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VGActivityIndicator/VGActivityIndicator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TVRG578TKB;
+				INFOPLIST_FILE = VGActivityIndicator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vein.VGActivityIndicator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		809644D42191D3E1006092DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TVRG578TKB;
+				INFOPLIST_FILE = VGActivityIndicatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vein.VGActivityIndicatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VGActivityIndicator.app/Contents/MacOS/VGActivityIndicator";
+			};
+			name = Debug;
+		};
+		809644D52191D3E1006092DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TVRG578TKB;
+				INFOPLIST_FILE = VGActivityIndicatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vein.VGActivityIndicatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VGActivityIndicator.app/Contents/MacOS/VGActivityIndicator";
+			};
+			name = Release;
+		};
+		809644D72191D3E1006092DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TVRG578TKB;
+				INFOPLIST_FILE = VGActivityIndicatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vein.VGActivityIndicatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VGActivityIndicator;
+			};
+			name = Debug;
+		};
+		809644D82191D3E1006092DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TVRG578TKB;
+				INFOPLIST_FILE = VGActivityIndicatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vein.VGActivityIndicatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VGActivityIndicator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		809644A12191D3E0006092DC /* Build configuration list for PBXProject "VGActivityIndicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809644CE2191D3E1006092DC /* Debug */,
+				809644CF2191D3E1006092DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		809644D02191D3E1006092DC /* Build configuration list for PBXNativeTarget "VGActivityIndicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809644D12191D3E1006092DC /* Debug */,
+				809644D22191D3E1006092DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		809644D32191D3E1006092DC /* Build configuration list for PBXNativeTarget "VGActivityIndicatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809644D42191D3E1006092DC /* Debug */,
+				809644D52191D3E1006092DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		809644D62191D3E1006092DC /* Build configuration list for PBXNativeTarget "VGActivityIndicatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809644D72191D3E1006092DC /* Debug */,
+				809644D82191D3E1006092DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8096449E2191D3E0006092DC /* Project object */;
+}
