@@ -59,7 +59,7 @@
     _lineIndex = 0;
     _hidesWhenStopped = YES;
     [self createlineLayers];
-    self.activityIndicatorViewStyle = VGActivityIndicatorLayerStyleWhite;
+    self.activityIndicatorViewStyle = VGActivityIndicatorViewStyleWhite;
 }
 
 - (void)initLineLayers {
@@ -79,20 +79,20 @@
     [CATransaction commit];
 }
 
-- (void)advancePosition {
+- (void)repeatAnimation {
     self.lineIndex++;
     if (self.lineIndex >= 12) {
         self.lineIndex = 0;
     }
     
-    CALayer *line = (CALayer *)[_lineLayers objectAtIndex:self.lineIndex];
+    CALayer *line = [self.lineLayers objectAtIndex:self.lineIndex];
     
     [CATransaction begin];
     [CATransaction setValue:[NSNumber numberWithBool:YES] forKey:kCATransactionDisableActions];
     line.opacity = 1.0;
     [CATransaction commit];
     
-    line.opacity = 0.0;
+    line.opacity = 0;
     
     [self.layer setNeedsDisplay];
 }
@@ -110,7 +110,7 @@
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.05
                                                   target:self
-                                                selector:@selector(advancePosition)
+                                                selector:@selector(repeatAnimation)
                                                 userInfo:nil
                                                  repeats:YES];
     self.animating = YES;
@@ -153,7 +153,7 @@
         
         [CATransaction begin];
         [CATransaction setValue:[NSNumber numberWithBool:YES] forKey:kCATransactionDisableActions];
-        newline.opacity = i > 0 ? 1 * ((CGFloat) i / (CGFloat) numlines) : 0;
+        newline.opacity = i > 0 ? 1 * ((CGFloat) i / (CGFloat) numlines) : 1;
         [CATransaction commit];
         
         CABasicAnimation *anim = [CABasicAnimation animation];
@@ -193,10 +193,10 @@
 - (void)setActivityIndicatorViewStyle:(VGActivityIndicatorViewStyle)activityIndicatorViewStyle {
     _activityIndicatorViewStyle = activityIndicatorViewStyle;
     switch (activityIndicatorViewStyle) {
-        case VGActivityIndicatorLayerStyleWhite:
+        case VGActivityIndicatorViewStyleWhite:
             self.lineColor = [NSColor whiteColor];
             break;
-        case VGActivityIndicatorLayerStyleGray:
+        case VGActivityIndicatorViewStyleGray:
             self.lineColor = [NSColor darkGrayColor];
             break;
     }

@@ -12,11 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, VGActivityIndicatorViewStyle) {
-    VGActivityIndicatorLayerStyleWhite,
-    VGActivityIndicatorLayerStyleGray
+    VGActivityIndicatorViewStyleWhite,
+    VGActivityIndicatorViewStyleGray
 };
 
-@interface VGActivityIndicatorView : NSView
+IB_DESIGNABLE @interface VGActivityIndicatorView : NSView
 
 - (instancetype)initWithActivityIndicatorStyle:(VGActivityIndicatorViewStyle)style NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithFrame:(NSRect)frame NS_DESIGNATED_INITIALIZER;

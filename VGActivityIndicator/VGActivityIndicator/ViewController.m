@@ -13,7 +13,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    VGActivityIndicatorView *view = [[VGActivityIndicatorView alloc] initWithActivityIndicatorStyle:VGActivityIndicatorLayerStyleWhite];
+    VGActivityIndicatorView *view = [[VGActivityIndicatorView alloc] initWithActivityIndicatorStyle:VGActivityIndicatorViewStyleWhite];
     [view startAnimating];
     [self.view addSubview:view];
     // Do any additional setup after loading the view.

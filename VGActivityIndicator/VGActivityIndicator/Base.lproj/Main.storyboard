@@ -713,6 +713,10 @@
                                 <rect key="frame" x="69" y="140" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-u4-Ymg" customClass="VGActivityIndicatorView">
+                                <rect key="frame" x="100" y="147" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                         </subviews>
                     </view>
                 </viewController>
