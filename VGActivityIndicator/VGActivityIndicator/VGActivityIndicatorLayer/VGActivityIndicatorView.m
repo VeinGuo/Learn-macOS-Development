@@ -108,12 +108,11 @@
         self.timer = nil;
     }
     
-    self.timer = [NSTimer timerWithTimeInterval:0.05
-                                          target:self
-                                        selector:@selector(advancePosition)
-                                        userInfo:nil
-                                         repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.05
+                                                  target:self
+                                                selector:@selector(advancePosition)
+                                                userInfo:nil
+                                                 repeats:YES];
     self.animating = YES;
 }
 
@@ -142,7 +141,7 @@
     
     NSInteger numlines = 12;
     
-    for (NSUInteger i = 0; i < numlines; i++) {
+    for (NSInteger i = 0; i < numlines; i++) {
         CALayer *newline = [CALayer layer];
         
         newline.bounds = lineBounds;
@@ -154,7 +153,7 @@
         
         [CATransaction begin];
         [CATransaction setValue:[NSNumber numberWithBool:YES] forKey:kCATransactionDisableActions];
-        newline.opacity = 1;
+        newline.opacity = i > 0 ? 1 * ((CGFloat) i / (CGFloat) numlines) : 0;
         [CATransaction commit];
         
         CABasicAnimation *anim = [CABasicAnimation animation];
