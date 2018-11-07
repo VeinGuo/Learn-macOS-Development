@@ -13,6 +13,8 @@
 		33B3069C2189988C00707F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33B3069A2189988C00707F0C /* Main.storyboard */; };
 		33B306A82189988D00707F0C /* WindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B306A72189988D00707F0C /* WindowTests.swift */; };
 		33B306B32189988D00707F0C /* WindowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B306B22189988D00707F0C /* WindowUITests.swift */; };
+		33F29174218C39A9002BE9D2 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F29173218C39A9002BE9D2 /* Window.swift */; };
+		33F29178218C3B02002BE9D2 /* VGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F29177218C3B02002BE9D2 /* VGView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		33B306AE2189988D00707F0C /* WindowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B306B22189988D00707F0C /* WindowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowUITests.swift; sourceTree = "<group>"; };
 		33B306B42189988D00707F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F29173218C39A9002BE9D2 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		33F29177218C3B02002BE9D2 /* VGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				33B306942189988B00707F0C /* AppDelegate.swift */,
 				33B306962189988B00707F0C /* ViewController.swift */,
+				33F29173218C39A9002BE9D2 /* Window.swift */,
+				33F29177218C3B02002BE9D2 /* VGView.swift */,
 				33B306982189988C00707F0C /* Assets.xcassets */,
 				33B3069A2189988C00707F0C /* Main.storyboard */,
 				33B3069D2189988C00707F0C /* Info.plist */,
@@ -256,6 +262,8 @@
 			files = (
 				33B306972189988B00707F0C /* ViewController.swift in Sources */,
 				33B306952189988B00707F0C /* AppDelegate.swift in Sources */,
+				33F29174218C39A9002BE9D2 /* Window.swift in Sources */,
+				33F29178218C3B02002BE9D2 /* VGView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
