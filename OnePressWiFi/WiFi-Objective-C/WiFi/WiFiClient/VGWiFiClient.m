@@ -112,9 +112,11 @@ NSErrorDomain const VGWiFiClientError = @"WiFiClientError";
             self.state = VGWiFiClientConnected;
         } else {
             self.state = VGWiFiClientStateIdle;
-            error = [NSError errorWithDomain:VGWiFiClientError
-                                        code:651
-                                    userInfo:@{NSLocalizedDescriptionKey : @"WiFi connection failed."}];
+            if (!error) {
+                error = [NSError errorWithDomain:VGWiFiClientError
+                                            code:651
+                                        userInfo:@{NSLocalizedDescriptionKey : @"WiFi connection failed."}];
+            }
         }
         if (completion) {
             completion(error);
@@ -157,9 +159,11 @@ NSErrorDomain const VGWiFiClientError = @"WiFiClientError";
             self.state = VGWiFiClientConnected;
         } else {
             self.state = VGWiFiClientStateIdle;
-            error = [NSError errorWithDomain:VGWiFiClientError
-                                        code:651
-                                    userInfo:@{NSLocalizedDescriptionKey : @"WiFi connection failed."}];
+            if (!error) {
+                error = [NSError errorWithDomain:VGWiFiClientError
+                                            code:651
+                                        userInfo:@{NSLocalizedDescriptionKey : @"WiFi connection failed."}];
+            }
         }
         
         if (completion) {
