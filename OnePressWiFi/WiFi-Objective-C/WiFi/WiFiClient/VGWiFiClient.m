@@ -11,6 +11,8 @@
 NSString * const VGWiFiClientConnectionInterrupted = @"VGWiFiClientConnectionInterrupted";
 NSString * const VGWiFiClientConnectionInvalidated = @"VGWiFiClientConnectionInvalidated";
 
+NSErrorDomain const VGWiFiClientError = @"WiFiClientError";
+
 @interface VGWiFiClient () <CWEventDelegate>
 
 @property (nonatomic, assign) VGWiFiClientState state;
@@ -82,19 +84,37 @@ NSString * const VGWiFiClientConnectionInvalidated = @"VGWiFiClientConnectionInv
                                     username:(NSString *)userName
                                     password:(NSString *)password
                                     completion:(void(^)(NSError *error))completion {
-    NSError *error = nil;
+    self.state = VGWiFiClientConnecting;
+    dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC));
+    dispatch_after(when, dispatch_get_main_queue(), ^{
+        [self _associateToEnterpriseNetworkWithSSID:ssid
+                                           username:userName
+                                           password:password
+                                         completion:completion];
+    });
+}
+
+- (void)_associateToEnterpriseNetworkWithSSID:(NSString *)ssid
+                                     username:(NSString *)userName
+                                     password:(NSString *)password
+                                   completion:(void(^)(NSError *error))completion {
+    __block NSError *error = nil;
+    BOOL isSuccess = NO;
     for (CWNetwork *network in [self.currentInterface cachedScanResults]) {
         if ([network.ssid isEqualToString:ssid]) {
-            [self.currentInterface associateToEnterpriseNetwork:network identity:nil username:userName password:password error:&error];
-            self.state = VGWiFiClientConnecting;
+            isSuccess = [self.currentInterface associateToEnterpriseNetwork:network identity:nil username:userName password:password error:&error];
             break;
         }
     }
     
-    //确保回调同步的在主线程执行
     dispatch_block_t block = ^{
-        if (!error) {
+        if (!error && isSuccess) {
             self.state = VGWiFiClientConnected;
+        } else {
+            self.state = VGWiFiClientStateIdle;
+            error = [NSError errorWithDomain:VGWiFiClientError
+                                        code:651
+                                    userInfo:@{NSLocalizedDescriptionKey : @"WiFi connection failed."}];
         }
         if (completion) {
             completion(error);
@@ -111,20 +131,37 @@ NSString * const VGWiFiClientConnectionInvalidated = @"VGWiFiClientConnectionInv
 - (void)associateToNetworkWithSSID:(NSString *)ssid
                                     password:(NSString *)password
                                   completion:(void(^)(NSError *error))completion {
-    NSError *error = nil;
+    self.state = VGWiFiClientConnecting;
+    dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC));
+    dispatch_after(when, dispatch_get_main_queue(), ^{
+        [self _associateToNetworkWithSSID:ssid
+                                 password:password
+                               completion:completion];
+    });
+}
+
+- (void)_associateToNetworkWithSSID:(NSString *)ssid
+                           password:(NSString *)password
+                         completion:(void(^)(NSError *error))completion {
+    __block NSError *error = nil;
+    BOOL isSuccess = NO;
     for (CWNetwork *network in [self.currentInterface cachedScanResults]) {
         if ([network.ssid isEqualToString:ssid]) {
-            [self.currentInterface associateToNetwork:network password:password error:&error];
-            self.state = VGWiFiClientConnecting;
+            isSuccess = [self.currentInterface associateToNetwork:network password:password error:&error];
             break;
         }
     }
     
-    //确保回调同步的在主线程执行
     dispatch_block_t block = ^{
-        if (!error) {
+        if (!error && isSuccess) {
             self.state = VGWiFiClientConnected;
+        } else {
+            self.state = VGWiFiClientStateIdle;
+            error = [NSError errorWithDomain:VGWiFiClientError
+                                        code:651
+                                    userInfo:@{NSLocalizedDescriptionKey : @"WiFi connection failed."}];
         }
+        
         if (completion) {
             completion(error);
         }
@@ -158,9 +195,18 @@ NSString * const VGWiFiClientConnectionInvalidated = @"VGWiFiClientConnectionInv
 }
 
 - (void)linkDidChangeForWiFiInterfaceWithName:(NSString *)interfaceName {
-    if (!self.ssid.length && self.state != VGWiFiClientStateIdle) {
-        self.state = VGWiFiClientStateIdle;
+    dispatch_block_t block = ^{
+        if (!self.ssid.length && self.state != VGWiFiClientConnecting) {
+            self.state = VGWiFiClientStateIdle;
+        }
+    };
+    
+    if ([NSThread isMainThread]) {
+        block();
+    } else {
+        dispatch_sync(dispatch_get_main_queue(), block);
     }
+    
     if ([self.delegate respondsToSelector:@selector(linkDidChangeForWiFiClientState:)]) {
         [self.delegate linkDidChangeForWiFiClientState:self.state];
     }

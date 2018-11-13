@@ -17,8 +17,8 @@ typedef NS_ENUM(NSInteger, VGWiFiClientState) {
     VGWiFiClientConnected,
 };
 
-extern NSString * const VGWiFiClientConnectionInterrupted;
-extern NSString * const VGWiFiClientConnectionInvalidated;
+FOUNDATION_EXPORT NSString * const VGWiFiClientConnectionInterrupted;
+FOUNDATION_EXPORT NSString * const VGWiFiClientConnectionInvalidated;
 
 @class VGWiFiClient;
 
