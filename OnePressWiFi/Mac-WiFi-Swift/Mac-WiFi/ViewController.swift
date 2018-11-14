@@ -22,6 +22,29 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func wifiOn(_ sender: NSButton) {
+        commandLineTask("networksetup -setairportpower 'Wi-Fi' on")
+    }
+    
+    @IBAction func wifiOff(_ sender: NSButton) {
+        commandLineTask("networksetup -setairportpower 'Wi-Fi' off")
+    }
+    
+    func commandLineTask(_ command: String) {
+        let process = Process()
+        process.launchPath = "/bin/sh"
+        let arguments = ["-c", command];
+        print(arguments)
+        process.arguments = arguments
+        
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        let file = pipe.fileHandleForReading
+        process.launch()
+        let data = file.readDataToEndOfFile()
+        let string = String(data: data, encoding: .utf8)
 
+        print("got \n" + (string ?? ""))
+    }
 }
 

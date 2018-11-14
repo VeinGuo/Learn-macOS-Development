@@ -48,6 +48,7 @@
 		3354821D219A7913002A2FD6 /* Mac_WiFiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_WiFiUITests.swift; sourceTree = "<group>"; };
 		3354821F219A7913002A2FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3354822D219A7A41002A2FD6 /* WiFiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiClient.swift; sourceTree = "<group>"; };
+		3354828A219BCAA9002A2FD6 /* Mac-WiFi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mac-WiFi.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		335481FE219A7912002A2FD6 /* Mac-WiFi */ = {
 			isa = PBXGroup;
 			children = (
+				3354828A219BCAA9002A2FD6 /* Mac-WiFi.entitlements */,
 				335481FF219A7912002A2FD6 /* AppDelegate.swift */,
 				33548201219A7912002A2FD6 /* ViewController.swift */,
 				33548203219A7913002A2FD6 /* Assets.xcassets */,
@@ -195,6 +197,11 @@
 				TargetAttributes = {
 					335481FB219A7912002A2FD6 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					3354820D219A7913002A2FD6 = {
 						CreatedOnToolsVersion = 10.1;
@@ -425,7 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Mac-WiFi/Mac_WiFi.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Mac-WiFi/Mac-WiFi.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mac-WiFi/Info.plist";
@@ -443,7 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Mac-WiFi/Mac_WiFi.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Mac-WiFi/Mac-WiFi.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mac-WiFi/Info.plist";
