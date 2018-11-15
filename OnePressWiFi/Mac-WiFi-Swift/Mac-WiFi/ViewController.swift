@@ -23,7 +23,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func wifiOn(_ sender: NSButton) {
-        commandLineTask("networksetup -setairportpower 'Wi-Fi' on")
+        commandLineTask("networksetup -removepreferredwirelessnetwork en1 hardwareport uum-dev-test")
     }
     
     @IBAction func wifiOff(_ sender: NSButton) {
