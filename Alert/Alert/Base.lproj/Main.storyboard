@@ -709,9 +709,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaL-X2-HmZ">
-                                <rect key="frame" x="216" y="22" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UaL-X2-HmZ">
+                                <rect key="frame" x="200" y="118" width="81" height="32"/>
                                 <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TW1-yv-Laa">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -721,6 +720,10 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="UaL-X2-HmZ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="9Wl-xe-ey1"/>
+                            <constraint firstItem="UaL-X2-HmZ" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="xFv-xf-T0b"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -101,17 +101,16 @@
 
 - (void)presentWithPopAnimation {
     NSRect endFrame = [self frame];
-    NSRect startFrame = [self.popoverController popoverFrameWithSize:START_SIZE];
-    NSRect overshootFrame = [self.popoverController popoverFrameWithSize:NSMakeSize(endFrame.size.width * OVERSHOOT_FACTOR, endFrame.size.height * OVERSHOOT_FACTOR)];
+    NSRect startFrame = [self.popoverController popoverCenterFrameWithSize:START_SIZE];
+//    NSRect overshootFrame = [self.popoverController popoverFrameWithSize:NSMakeSize(endFrame.size.width * OVERSHOOT_FACTOR, endFrame.size.height * OVERSHOOT_FACTOR)];
 
     _zoomWindow = [self _zoomWindowWithRect:startFrame];
     [_zoomWindow setAlphaValue:0.0];
     [_zoomWindow orderFront:self];
 
-    // configure bounce-out animation
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animation];
     [anim setDelegate:self];
-    [anim setValues:[NSArray arrayWithObjects:[NSValue valueWithRect:startFrame], [NSValue valueWithRect:overshootFrame], [NSValue valueWithRect:endFrame], nil]];
+    [anim setValues:[NSArray arrayWithObjects:[NSValue valueWithRect:startFrame], [NSValue valueWithRect:endFrame], nil]];
     [_zoomWindow setAnimations:[NSDictionary dictionaryWithObjectsAndKeys:anim, @"frame", nil]];
 
     [NSAnimationContext beginGrouping];
@@ -153,10 +152,6 @@
 // <https://github.com/MrNoodle/NoodleKit/blob/master/NSWindow-NoodleEffects.m>
 //  Copyright 2007-2009 Noodlesoft, LLC. All rights reserved.
 - (NSWindow *)_zoomWindowWithRect:(NSRect)rect {
-    BOOL isOneShot = self.oneShot;
-    if (isOneShot)
-        [self setOneShot:NO];
-
     if ([self windowNumber] <= 0) {
         // force creation of window device by putting it on-screen. We make it transparent to minimize the chance of visible flicker
         CGFloat alpha = [self alphaValue];
@@ -190,9 +185,6 @@
     [imageView setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
 
     [zoomWindow setContentView:imageView];
-
-    // reset one shot flag
-    [self setOneShot:isOneShot];
 
     return zoomWindow;
 }

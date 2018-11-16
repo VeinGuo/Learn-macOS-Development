@@ -136,14 +136,7 @@
 - (NSRect)popoverFrameWithSize:(NSSize)contentSize {
     NSRect contentRect = NSZeroRect;
     contentRect.size = contentSize;
-    CGFloat mainWindowMaxY = CGRectGetMaxY(_screenRect);
-    CGFloat mainWindowMaxX = CGRectGetMaxX(_screenRect);
-    CGFloat mainWindowWidth = CGRectGetWidth(_screenRect);
-    CGFloat mainWindowHeight = CGRectGetHeight(_screenRect);
-    CGFloat screenOriginX = (mainWindowMaxX - mainWindowWidth/2 - contentSize.width/2);
-    CGFloat screenOriginY = (mainWindowMaxY - mainWindowHeight/2 - contentSize.height/2);
-    
-    contentRect.origin = CGPointMake(screenOriginX, screenOriginY);
+    contentRect.origin = _screenRect.origin;
     NSRect windowFrame = [_popoverWindow frameRectForContentRect:contentRect];
     return windowFrame;
 }
@@ -155,8 +148,8 @@
     CGFloat mainWindowMaxX = CGRectGetMaxX(_screenRect);
     CGFloat mainWindowWidth = CGRectGetWidth(_screenRect);
     CGFloat mainWindowHeight = CGRectGetHeight(_screenRect);
-    CGFloat screenOriginX = (mainWindowMaxX - mainWindowWidth/2 - contentSize.width/2);
-    CGFloat screenOriginY = (mainWindowMaxY - mainWindowHeight/2 - contentSize.height/2);
+    CGFloat screenOriginX = (mainWindowMaxX - mainWindowWidth + _viewRect.size.width + contentSize.width);
+    CGFloat screenOriginY = (mainWindowMaxY - mainWindowHeight + _viewRect.size.height + contentSize.height);
     
     contentRect.origin = CGPointMake(screenOriginX, screenOriginY);
     NSRect windowFrame = [_popoverWindow frameRectForContentRect:contentRect];
